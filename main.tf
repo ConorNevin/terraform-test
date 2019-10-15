@@ -16,16 +16,3 @@ resource "digitalocean_droplet" "mywebserver" {
   name               = "mywebserver-ams3"
 
 }
-
-resource "digitalocean_domain" "mywebserver" {
-  name       = "www.mywebserver.com"
-  ip_address = digitalocean_droplet.mywebserver.ipv4_address
-}
-
-resource "digitalocean_record" "mywebserver" {
-  domain = digitalocean_domain.mywebserver.name
-  type   = "A"
-  name   = "mywebserver"
-  value  = digitalocean_droplet.mywebserver.ipv4_address
-}
-
