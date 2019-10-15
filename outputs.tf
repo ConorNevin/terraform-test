@@ -1,8 +1,8 @@
-output "Public ip" {
+output "ip" {
   value = digitalocean_droplet.mywebserver.ipv4_address
 }
 
-output "Name" {
+output "name" {
   value = digitalocean_droplet.mywebserver.name
 }
 
