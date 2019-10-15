@@ -77,3 +77,4 @@ variable "coreos" {
   description = "Defaut Coreos"
   default     = "coreos-899.17.0"
 }
+
